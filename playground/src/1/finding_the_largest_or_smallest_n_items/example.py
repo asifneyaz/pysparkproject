@@ -4,7 +4,7 @@
 
 import heapq
 
-
+##This is a sample function to illustrate how lamba function works
 def share_price(s):
     print(s['price'])
     return s['price']
@@ -20,6 +20,7 @@ portfolio = [
 ]
 
 cheap = heapq.nsmallest(3, portfolio, key=share_price)
+#cheap = heapq.nsmallest(3, portfolio, key=lambda s: s['price'])
 expensive = heapq.nlargest(3, portfolio, key=lambda s: s['price'])
 
 print(cheap)
